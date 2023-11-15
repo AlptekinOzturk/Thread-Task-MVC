@@ -1,0 +1,17 @@
+﻿Thread Nedir?
+
+-Thread (iş parçacığı) kendi program ve memory alanına sahip temel bir cpu kullanım birimidir. Bir zamanlayıcı tarafından bağımsız bir şekilde yönetilen talimatların en küçük bölümüdür. Threadler .NET'e ait bir yapı değildir. OS(Operating System) e ait iş parçacıklarıdır. .NET'in Thread sınıfı aslında Thread'leri oluşturabilmenin ve yönetmenin bir yoludur.C# Foreground Thread ve Background Thread olmak üzere 2 Thread yapısını desteklemektedir.
+
+Foreground Thread
+-Bir Foreground Thread main thread'in sonlanmış olmasından etkilenmez yalnızca kendisine verilen iş bittiğinde tamamlanır. Yani Foreground bir Thread'in yaşam döngüsü Main Thread'e bağlı değildir. Foreground Threadler son Foreground Thread sonlanana kadar çalışmaya devam edecek olan evrelerdir. Threadler default olarak Foreground oluştururlar.
+
+Background Thread
+-Foreground'un tersine bu Thread'lerin çalaışması Main Thread'in veya diğer tüm Foreground Thread'lerin aktif durumda olmasına bağlıdır. Main Thread veya diğer tüm Foreground Thread'ler sonlandırıldığında Background Thread görevini tamamlayamadan sonlanır. Background Thread yapısını kullanabilmek için Thread'in IsBackground özelliğini true olarak ayarlamamız gereklidir.
+
+Asenkron Programlama
+
+Async ve Await uygulamamızı asenkron olarak programlamamıoza yardımcı olan iki anahatar kelimedir.Async anahtar sözcüğü bir veri tabanından veri çekme dosya okuma gibi asenkron(eşzamansız) görevleri gerçekleştiren bir methodtur.Bunlar"async" olarak işaretlenebilir.Bir ifadeye "await" annahtar kelimesi yapmak görev tamamlananan kadar içinde bulunduğu asenkron methodun yürütülmesini askıya almak anlamına gelir.Askıya alma işleminden sonra kontrol çağıran methoda geri döner.Görev tamamlandıktan sonra kontrol await'in belirtildiği durumlara geri döner ve onu çevreleyen methodta kalan ifadeleri yürütür.
+
+Senkron Programlama
+
+- Genel olarak kod sırayla yürütülür, yani ifadeler biribiri ardına yürütülür.Diğer bir deyişle standart programlama deneyimi.
